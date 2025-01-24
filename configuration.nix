@@ -92,8 +92,6 @@
       gh
       docker
       wget
-      gnomeExtensions.dash-to-dock
-      gnome.gnome-tweaks
     ];
   };
 
@@ -119,7 +117,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    
+    gnomeExtensions.dash-to-dock
+    gnome.gnome-tweaks
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
