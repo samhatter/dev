@@ -91,7 +91,19 @@
       git
       gh
       docker
+      wget
+      gnomeExtensions.dash-to-dock
+      gnome.gnome-tweaks
     ];
+  };
+
+  # Enable fingerprint service
+  services.fprintd = {
+    enable = true;
+    tod = {
+      enable = true;
+      driver = libfprint-2-tod1-vfs0090;
+    }
   };
 
   # Enable automatic login for the user.
@@ -108,9 +120,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    wget
-    gnomeExtensions.dash-to-dock
-    gnome.gnome-tweaks
+    fprintd
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
