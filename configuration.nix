@@ -100,10 +100,9 @@
   # Enable fingerprint service
   services.fprintd = {
     enable = true;
-    tod = {
-      enable = true;
-      driver = libfprint-2-tod1-vfs0090;
-    }
+    package = pkgs.fprintd-tod;
+    tod.enable = true;
+    tod.driver = pkgs.libfprint-2-tod1-goodix-550a;
   };
 
   # Enable automatic login for the user.
@@ -120,7 +119,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    fprintd
+    
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
