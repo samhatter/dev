@@ -93,6 +93,7 @@
       docker
       wget
       discord
+      xpipe
     ];
   };
 
