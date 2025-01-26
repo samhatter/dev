@@ -92,6 +92,7 @@
       gh
       docker
       wget
+      discord
     ];
   };
 
