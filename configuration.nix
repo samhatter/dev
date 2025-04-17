@@ -86,15 +86,21 @@
     packages = with pkgs; [
       chromium
       plexamp
-      plex-media-player
+      plex-desktop
       vscode
       git
+      firefox
       gh
       docker
       wget
       discord
-      termius
+      vim
     ];
+  };
+
+  xdg.portal = {
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    xdgOpenUsePortal = true;
   };
 
   # Enable fingerprint service
@@ -120,7 +126,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     gnomeExtensions.dash-to-dock
-    gnome.gnome-tweaks
+    gnome-tweaks
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
