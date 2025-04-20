@@ -129,6 +129,10 @@
     gnome-tweaks
   ];
 
+  fileSystems."~/media" = {
+    device = "192.168.1.221:/storage/media";
+    fsType = "nfs";
+  };
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
