@@ -85,10 +85,12 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       chromium
+      zoom-us
       plexamp
       plex-desktop
       vscode
       git
+      gh
       firefox
       gh
       docker
@@ -129,9 +131,12 @@
     gnome-tweaks
   ];
 
-  fileSystems."~/media" = {
+  fileSystems."/home/samantha/media" = {
     device = "192.168.1.221:/storage/media";
     fsType = "nfs";
+    options = [
+      "rw"
+    ];
   };
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
