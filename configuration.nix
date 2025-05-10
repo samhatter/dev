@@ -85,18 +85,17 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       chromium
-      zoom-us
+      discord
+      docker
+      gh
+      git
+      firefox
       plexamp
       plex-desktop
-      vscode
-      git
-      gh
-      firefox
-      gh
-      docker
-      wget
-      discord
       vim
+      vscode
+      wget
+      zoom-us
     ];
   };
 
