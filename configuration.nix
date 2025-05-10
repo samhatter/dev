@@ -87,9 +87,11 @@
       chromium
       discord
       docker
+      geekbench
       gh
       git
       firefox
+      lmstudio
       plexamp
       plex-desktop
       vim
