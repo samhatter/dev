@@ -4,6 +4,9 @@
 
 { config, pkgs, ... }:
 
+let
+  unstable = import <unstable> { config = config.nixpkgs.config; };
+in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -79,6 +82,7 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  
   users.users.samantha = {
     isNormalUser = true;
     description = "samantha";
@@ -93,7 +97,7 @@
       firefox
       lmstudio
       plexamp
-      plex-desktop
+      unstable.plex-desktop
       vim
       vscode
       wget
